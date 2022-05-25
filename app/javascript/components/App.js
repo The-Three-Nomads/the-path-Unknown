@@ -22,8 +22,8 @@ class App extends Component {
         <Router>
           <Header {...this.props} />
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/aboutus" component={AboutUs} />
+              <Route exact path="/" component={Home} />
+              <Route path="/aboutus" component={AboutUs} />
           </Switch>
         </Router>
     )

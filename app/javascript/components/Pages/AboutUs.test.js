@@ -20,3 +20,4 @@ describe("When AboutUs renders", () => {
       expect(aboutusCards.length).toEqual(1)
     })
   })
+  
