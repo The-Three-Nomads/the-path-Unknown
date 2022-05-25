@@ -10,7 +10,7 @@ class Home extends Component {
                 <img src={trailicon}></img>
             </div>
         );
-    }s
+    }
 }
 
 export default Home;
