@@ -4,6 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
+import AboutUs from './pages/AboutUs'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Home from './pages/Home'
@@ -22,6 +23,7 @@ class App extends Component {
           <Header {...this.props} />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route path="/aboutus" component={AboutUs} />
           </Switch>
         </Router>
     )

@@ -16,6 +16,9 @@ class Header extends Component {
     return (
       <>
         <Nav>
+          <NavItem>
+            <a href={'/'} className="nav-link">Path Unknown</a>
+          </NavItem>
           {logged_in &&
             <NavItem>
               <a href={sign_out_route} className="nav-link">Sign Out</a>
@@ -31,6 +34,9 @@ class Header extends Component {
               <a href={new_user_route} className="nav-link">Sign Up</a>
             </NavItem>
           }
+          <NavItem>
+            <a href={'/aboutus'} className="nav-link">About Us</a>
+          </NavItem>
         </Nav>
       </>
     )
