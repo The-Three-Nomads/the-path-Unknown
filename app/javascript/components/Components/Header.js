@@ -5,21 +5,18 @@ class Header extends Component {
   render() {
     const {
       logged_in,
-      current_user,
       new_user_route,
       sign_in_route,
       sign_out_route,
     } = this.props;
-    console.log("logged_in:", logged_in);
-    console.log("current_user:", current_user);
 
     return (
       <>
         <Nav>
           <NavItem>
-            <a href={"/"} className="nav-link">
+            <NavLink to={"/"} className="nav-link">
               Path Unknown
-            </a>
+            </NavLink>
           </NavItem>
           {logged_in && (
             <NavItem>
@@ -43,20 +40,20 @@ class Header extends Component {
             </NavItem>
           )}
           <NavItem>
-            <a href={"/aboutus"} className="nav-link">
+            <NavLink to={"/aboutus"} className="nav-link">
               About Us
-            </a>
+            </NavLink>
           </NavItem>
           <NavItem>
-            <a href={"/locationindex"} className="nav-link">
+            <NavLink to={"/locationindex"} className="nav-link">
               Path List
-            </a>
+            </NavLink>
           </NavItem>
           {logged_in && (
             <NavItem>
-              <a href={"/userlocation"} className="nav-link">
+              <NavLink to={"/userlocation"} className="nav-link">
                 Your Paths
-              </a>
+              </NavLink>
             </NavItem>
           )}
         </Nav>

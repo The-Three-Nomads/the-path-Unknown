@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 
 export default class LocationIndex extends Component {
   render() {
-    console.log(this.props.userLocations);
     return (
       <>
         <h3>Your Path Listings</h3>
