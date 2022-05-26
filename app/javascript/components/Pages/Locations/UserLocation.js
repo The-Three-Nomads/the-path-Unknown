@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import { Card, CardTitle, Col } from "reactstrap";
+import { CardTitle, Col } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
 export default class LocationIndex extends Component {
   render() {
-    console.log(this.props.locations);
+    console.log(this.props.userLocations);
     return (
       <>
-        <h3>View a list of all available locations</h3>
+        <h3>Your Path Listings</h3>
 
         <Col sm="6">
-          {this.props.locations &&
-            this.props.locations.map((location) => {
+          {this.props.userLocations &&
+            this.props.userLocations.map((location) => {
               return (
                 <NavLink to={`/locationshow/${location.id}`} key={location.id}>
                   <CardTitle>
