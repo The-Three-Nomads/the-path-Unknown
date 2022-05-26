@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import LocationEdit from "./pages/Locations/LocationEdit";
 import LocationIndex from "./pages/Locations/LocationIndex";
@@ -31,10 +31,7 @@ class App extends Component {
   };
 
   render() {
-    const {
-      logged_in,
-      current_user,
-    } = this.props;
+    const { logged_in, current_user } = this.props;
 
     return (
       <Router>
@@ -59,6 +56,16 @@ class App extends Component {
               }}
             />
           )}
+          <Route
+            path="/locationshow/:id"
+            render={(props) => {
+              let id = props.match.params.id;
+              let location = this.state.locations.find(
+                (location) => location.id === +id
+              );
+              return <LocationShow location={location} />;
+            }}
+          />
         </Switch>
       </Router>
     );
