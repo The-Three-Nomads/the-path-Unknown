@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Nav, NavItem } from "reactstrap";
+import { NavLink } from "react-router-dom"
 
 class Header extends Component {
   render() {
@@ -14,7 +15,7 @@ class Header extends Component {
       <>
         <Nav>
           <NavItem>
-            <NavLink to={"/"} className="nav-link">
+            <NavLink to="/" className="nav-link">
               Path Unknown
             </NavLink>
           </NavItem>
@@ -40,18 +41,18 @@ class Header extends Component {
             </NavItem>
           )}
           <NavItem>
-            <NavLink to={"/aboutus"} className="nav-link">
+            <NavLink to="/aboutus" className="nav-link">
               About Us
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to={"/locationindex"} className="nav-link">
+            <NavLink to="/locationindex" className="nav-link">
               Path List
             </NavLink>
           </NavItem>
           {logged_in && (
             <NavItem>
-              <NavLink to={"/userlocation"} className="nav-link">
+              <NavLink to="/userlocation" className="nav-link">
                 Your Paths
               </NavLink>
             </NavItem>
