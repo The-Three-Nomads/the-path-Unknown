@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import { Nav, NavItem } from "reactstrap";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 class Header extends Component {
   render() {
-    const {
-      logged_in,
-      new_user_route,
-      sign_in_route,
-      sign_out_route,
-    } = this.props;
+    const { logged_in, new_user_route, sign_in_route, sign_out_route } =
+      this.props;
 
     return (
       <>
@@ -54,6 +50,13 @@ class Header extends Component {
             <NavItem>
               <NavLink to="/userlocation" className="nav-link">
                 Your Paths
+              </NavLink>
+            </NavItem>
+          )}
+          {logged_in && (
+            <NavItem>
+              <NavLink to="/locationnew" className="nav-link">
+                Add a New Path
               </NavLink>
             </NavItem>
           )}

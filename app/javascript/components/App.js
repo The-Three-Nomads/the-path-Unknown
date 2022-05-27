@@ -20,19 +20,31 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.readlocation();
+    this.readLocation();
   }
 
-  readlocation = () => {
+  readLocation = () => {
     fetch("/locations")
       .then((response) => response.json())
       .then((payload) => this.setState({ locations: payload }))
       .catch((errors) => console.log("locations read error: ", errors));
   };
 
+  createLocation = (newlyCreatedLocation) => {
+    fetch("/locations", {
+      body: JSON.stringify(newlyCreatedLocation),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => response.json())
+      .then(() => this.readLocation())
+      .catch((errors) => console.log("location create error: ", errors));
+  };
+
   render() {
     const { logged_in, current_user } = this.props;
-
     return (
       <Router>
         <Header {...this.props} />
@@ -64,6 +76,17 @@ class App extends Component {
                 (location) => location.id === +id
               );
               return <LocationShow location={location} />;
+            }}
+          />
+          <Route
+            path="/locationnew"
+            render={() => {
+              return (
+                <LocationNew
+                  createLocation={this.createLocation}
+                  current_user={current_user}
+                />
+              );
             }}
           />
         </Switch>
