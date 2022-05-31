@@ -62,9 +62,9 @@ RSpec.describe "Locations", type: :request do
 
         post '/locations', params: location_params
 
-        #expect(response).to have_http_status(200)
         location = Location.first
         expect(location.street).to eq 'Constance ST'
         end
     end
+
 end

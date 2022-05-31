@@ -43,6 +43,19 @@ class App extends Component {
       .catch((errors) => console.log("location create error: ", errors));
   };
 
+  updateLocation = (newLocation, id) => {
+    fetch(`/locations/${id}`, {
+      body: JSON.stringify(newLocation),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    })
+      .then((response) => (response).json())
+      .then(() => this.readLocation())
+      .catch((errors) => console.log("location update error: ", errors));
+  };
+
   render() {
     const { logged_in, current_user } = this.props;
     return (
@@ -80,10 +93,21 @@ class App extends Component {
           />
           <Route
             path="/locationnew"
-            render={() => {
+            render={() => (
+              <LocationNew
+                createLocation={this.createLocation}
+                current_user={current_user}
+              />
+            )}
+          />
+          <Route
+            path="/locationedit/:id"
+            render={(props) => {
               return (
-                <LocationNew
-                  createLocation={this.createLocation}
+                <LocationEdit
+                  {...props}
+                  updateLocation={this.updateLocation}
+                  locations={this.state.locations}
                   current_user={current_user}
                 />
               );
