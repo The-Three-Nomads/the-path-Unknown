@@ -51,9 +51,26 @@ class App extends Component {
       },
       method: "PATCH",
     })
-      .then((response) => (response).json())
+      .then((response) => response.json())
       .then(() => this.readLocation())
-      .catch((errors) => console.log("location update error: ", errors));
+      .catch((errors) => console.error("location update error: ", errors));
+  };
+
+  deleteLocation = (id) => {
+    fetch(`/locations/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (response.status == 200) {
+          return this.readLocation();
+        } else {
+          throw new Error();
+        }
+      })
+      .catch((errors) => console.log("delete errors:", errors));
   };
 
   render() {
@@ -77,7 +94,12 @@ class App extends Component {
                 let userLocations = this.state.locations.filter(
                   (location) => location.user_id === current_user.id
                 );
-                return <UserLocation userLocations={userLocations} />;
+                return (
+                  <UserLocation
+                    deleteLocation={this.deleteLocation}
+                    userLocations={userLocations}
+                  />
+                );
               }}
             />
           )}
@@ -88,7 +110,12 @@ class App extends Component {
               let location = this.state.locations.find(
                 (location) => location.id === +id
               );
-              return <LocationShow location={location} />;
+              return (
+                <LocationShow
+                  deleteLocation={this.deleteLocation}
+                  location={location}
+                />
+              );
             }}
           />
           <Route
