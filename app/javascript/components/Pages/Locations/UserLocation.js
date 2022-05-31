@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CardTitle, Col } from "reactstrap";
+import { CardTitle, Col, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
 export default class LocationIndex extends Component {
@@ -18,6 +18,11 @@ export default class LocationIndex extends Component {
                     <h4>{location.state}</h4>
                     <img src={location.image} width="200px" />
                   </CardTitle>
+                  <Button>
+                    <NavLink to={`/locationedit/${location.id}`}>
+                      UPDATE
+                    </NavLink>
+                  </Button>
                 </NavLink>
               );
             })}

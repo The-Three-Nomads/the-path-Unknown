@@ -13,6 +13,16 @@ class LocationsController < ApplicationController
         end
     end
 
+    def update
+        location= Location.find(params[:id])
+        location.update(location_params)
+        if location.valid?
+            render json: location
+        else
+            render json: location.errors, status: 422
+        end
+    end
+
     private
     def location_params
         params.require(:location).permit(:street, :city, :state, :description, :fee, :coordinates, :image, :link, :review, :user_id)
