@@ -1,68 +1,51 @@
 import React, { Component } from "react";
-import { Nav, NavItem } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import {
+  Nav,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavBtnLink,
+  NavLink,
+} from "./navbar/NavBarElements";
+import "./navbar/Navbar.css"
+
 
 class Header extends Component {
   render() {
     const { logged_in, new_user_route, sign_in_route, sign_out_route } =
       this.props;
 
-    return (
-      <>
-        <Nav>
-          <NavItem>
-            <NavLink to="/" className="nav-link">
-              Path Unknown
+      return (
+        <>
+          <Nav>
+            <NavLink to="/" >
+              <h1 className="link">Path Unknown</h1>
             </NavLink>
-          </NavItem>
-          {logged_in && (
-            <NavItem>
-              <a href={sign_out_route} className="nav-link">
-                Sign Out
-              </a>
-            </NavItem>
-          )}
-          {!logged_in && (
-            <NavItem>
-              <a href={sign_in_route} className="nav-link">
-                Sign In
-              </a>
-            </NavItem>
-          )}
-          {!logged_in && (
-            <NavItem>
-              <a href={new_user_route} className="nav-link">
-                Sign Up
-              </a>
-            </NavItem>
-          )}
-          <NavItem>
-            <NavLink to="/aboutus" className="nav-link">
-              About Us
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/locationindex" className="nav-link">
-              Path List
-            </NavLink>
-          </NavItem>
-          {logged_in && (
-            <NavItem>
-              <NavLink to="/userlocation" className="nav-link">
-                Your Paths
-              </NavLink>
-            </NavItem>
-          )}
-          {logged_in && (
-            <NavItem>
-              <NavLink to="/locationnew" className="nav-link">
-                Add a New Path
-              </NavLink>
-            </NavItem>
-          )}
-        </Nav>
-      </>
-    );
+            <Bars/>
+              <NavMenu>
+                <NavLink to="/aboutus">About Us</NavLink>
+                  <NavLink to="/locationindex">Path List</NavLink>
+                {logged_in && (
+                  <NavLink to="/userlocation" >Your Paths</NavLink>
+                )}
+                {logged_in && (
+                  <NavLink to="/locationnew" className="link">
+                    Add a New Path
+                  </NavLink>
+                )}
+                {logged_in && (
+                  <a href={sign_out_route} className= "link" >Sign Out</a>
+                )}
+                {!logged_in && (
+                  <a href={sign_in_route} className= "link" >Sign In</a>
+                )}
+                {!logged_in && (
+                  <a href={new_user_route} className= "link" >Sign Up</a>
+                )}
+              </NavMenu>
+           </Nav>
+        </>
+      );
+    }
   }
-}
 export default Header;
