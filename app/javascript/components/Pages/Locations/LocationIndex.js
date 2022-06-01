@@ -10,8 +10,7 @@ export default class LocationIndex extends Component {
     return (
       <>
         <CardTitle><center><h4 className="page-title">All Locations</h4></center></CardTitle>
-        <Container>
-          <br></br><br></br>
+        <Container className="cardWrapper">
           <center>
             <Row> {this.props.locations &&
               this.props.locations.map((location) => {

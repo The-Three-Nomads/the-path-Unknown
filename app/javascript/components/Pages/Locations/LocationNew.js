@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, Input, Label, Button } from "reactstrap";
+import { Form, FormGroup, Input, Label, Button, CardTitle } from "reactstrap";
 import { Redirect } from "react-router-dom";
 
 class LocationNew extends Component {
@@ -36,57 +36,62 @@ class LocationNew extends Component {
   render() {
     return (
       <>
-        <h1>Create a New Location</h1>
-        <Form>
-          <FormGroup>
-            <Label for="street">Street</Label>
-            <Input type="text" name="street" onChange={this.handleChange} />
+        <CardTitle><center><h4 className="page-title">Create a New Path</h4></center></CardTitle>
+        <div className="centeredForm">
+        <Form className="formWrapper">
+          <FormGroup className="formGroup">
+            <Label className="label" for="street">Street:</Label>
+            <Input className="formGroup-input" type="text" name="street" onChange={this.handleChange} />
           </FormGroup>
-          <FormGroup>
-            <Label for="city">City</Label>
-            <Input type="text" name="city" onChange={this.handleChange} />
+          <FormGroup className="formGroup">
+            <Label className="label" for="city">City:</Label>
+            <Input className="formGroup-input" type="text" name="city" onChange={this.handleChange} />
           </FormGroup>
-          <FormGroup>
-            <Label for="state">State</Label>
-            <Input type="text" name="state" onChange={this.handleChange} />
+          <FormGroup className="formGroup">
+            <Label className="label" for="state">State:</Label>
+            <Input className="formGroup-input" type="text" name="state" onChange={this.handleChange} />
           </FormGroup>
-          <FormGroup>
-            <Label for="description">Description</Label>
+          <FormGroup className="formGroup">
+            <Label className="label" for="description">Description:</Label>
             <Input
+              className="formGroup-input"
               type="text"
               name="description"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup>
-            <Label for="fee">Fee</Label>
-            <Input type="text" name="fee" onChange={this.handleChange} />
+          <FormGroup className="formGroup">
+            <Label className="label" for="fee">Fee:</Label>
+            <Input className="formGroup-input" type="text" name="fee" onChange={this.handleChange} />
           </FormGroup>
-          <FormGroup>
-            <Label for="coordinates">Coordinates</Label>
+          <FormGroup className="formGroup">
+            <Label className="label" for="coordinates">Coordinates:</Label>
             <Input
+              className="formGroup-input"
               type="text"
               name="coordinates"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup>
-            <Label for="image">Image URL</Label>
-            <Input type="text" name="image" onChange={this.handleChange} />
+          <FormGroup className="formGroup">
+            <Label className="label" for="image">Image URL:</Label>
+            <Input className="formGroup-input" type="text" name="image" onChange={this.handleChange} />
           </FormGroup>
-          <FormGroup>
-            <Label for="link">Link to Website</Label>
-            <Input type="text" name="link" onChange={this.handleChange} />
+          <FormGroup className="formGroup">
+            <Label className="label" for="link">Link to Website:</Label>
+            <Input className="formGroup-input" type="text" name="link" onChange={this.handleChange} />
           </FormGroup>
-          <FormGroup>
-            <Label for="review">Review</Label>
-            <Input type="text" name="review" onChange={this.handleChange} />
+          <FormGroup className="formGroup">
+            <Label className="label" for="review">Review:</Label>
+            <Input className="formGroup-input" type="text" name="review" onChange={this.handleChange} />
           </FormGroup>
-        </Form>
-        <Button onClick={this.handleSubmit} name="submit">
-          Submit Location
+        <Button className="submitButton" onClick={this.handleSubmit} name="submit">
+          Submit
         </Button>
+        </Form>
+        </div>
         {this.state.submitted && <Redirect to="/locationindex" />}
+   
       </>
     );
   }

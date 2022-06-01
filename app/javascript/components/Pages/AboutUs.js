@@ -10,7 +10,7 @@ class AboutUs extends Component {
     render() {
         return (
                 <center>
-            <Col sm="6">
+            <Col>
                 <CardGroup className='cardgroup'>
                 <Card className='about-card'>
                     <CardImg src={jack} className='cardimage'/>

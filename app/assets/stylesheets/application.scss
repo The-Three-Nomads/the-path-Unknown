@@ -4,10 +4,50 @@
     background-color: #2f4858;
 }
 
+body {
+    background-color: #2f4858;
+
+}
+
 .link {
     background-color: #FF934F;
 }
 
 Container {
     margin-top: 200px;
+}
+
+h2 {
+    font-size: 30px;
+    text-shadow: 0px 2px 2px #000000;
+    color: #fff;
+    text-align: center;
+}
+
+.formGroup-input {
+ 
+    width: 350px;
+    background: #0FA3B1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+.log-in {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 300px;
+    top: 230px;
+    display: flex;
+    background: #0FA3B1;
+    border: 5px solid #000000;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 20px;
 }
