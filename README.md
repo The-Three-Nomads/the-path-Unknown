@@ -1,8 +1,10 @@
 # README
-APP name:
+APP name: 
     Path Unknown
+
 Overview:
-    Our app is designed to help people find forgotten/hidden places. Our team is deeply invested in the user experience and our app will allow a user to create an account where they will be able to post a location with details such as photos, descriptions, directions, and what they love about it. The places can be forgotten parks, mom and pop restaurants, or hidden spots inside a city. Any user will be able to see all the locations but only a user who has an account and is signed in will be able to make a post. Each user will also only be able to edit or delete the post that they themselves create.
+    Our app is designed to help people find forgotten/hidden places. Our team is deeply invested in the user experience and our app will allow a user to create an account where they will be able to post a location with details such as photos, descriptions, directions, and what they love about it. The places can be forgotten parks, mom and pop restaurants, or hidden spots inside a city. Any user will be able to see all the locations but only a user who has an account and is signed in will be able to make a post. Each user will also only be able to edit or delete the post that they themselves create. 
+
 Features:
     As a user you have the option to sign up or in.
     An unregistered user can only see an index of locations and details on any specific location.
