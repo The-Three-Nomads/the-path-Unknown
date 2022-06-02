@@ -36,7 +36,11 @@ class LocationNew extends Component {
   render() {
     return (
       <>
-        <CardTitle><center><h4 className="page-title">Create a New Path</h4></center></CardTitle>
+        <CardTitle>
+          <center>
+            <h4 className="page-title">Create a New Path</h4>
+          </center>
+        </CardTitle>
         <div className="centeredForm">
         <Form className="formWrapper">
           <FormGroup className="formGroup">

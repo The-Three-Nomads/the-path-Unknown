@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap'
 import trailicon from '../assets/trailicon'
 import "./../Components/navbar/Navbar.css"
-import "./../Components/navbar/Navbar.css"
 import "./App.css"
 
  

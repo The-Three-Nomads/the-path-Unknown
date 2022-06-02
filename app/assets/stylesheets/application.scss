@@ -21,17 +21,16 @@ h2 {
 }
 
 .formGroup-input {
- 
     width: 350px;
     background: #0FA3B1;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    // padding-top: 20px;
+    
     label {
         padding: 5px;
     }
-    }
+}
 
 .log-in {
     margin-left: auto;
@@ -65,7 +64,6 @@ h2 {
 }
 
 .logInLink {
-    // position: absolute;
     bottom: 0;
 }
 

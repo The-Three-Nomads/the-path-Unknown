@@ -44,7 +44,11 @@ class LocationEdit extends Component {
   render() {
     return (
       <>
-        <CardTitle><center><h4 className="page-title">Update Path</h4></center></CardTitle>
+        <CardTitle>
+          <center>
+            <h4 className="page-title">Update Path</h4>
+          </center>
+        </CardTitle>
         <Form className="formWrapper">
           <FormGroup className="formGroup">
             <Label className="label" for="street">Street:</Label>
@@ -136,9 +140,7 @@ class LocationEdit extends Component {
               onChange={this.handleChange}
             />
           </FormGroup>
-        <Button className="submitButton" onClick={this.handleSubmit} name="submit">
-          Submit
-        </Button>
+          <Button className="submitButton" onClick={this.handleSubmit} name="submit">Submit</Button>
         </Form>
         {this.state.submitted && <Redirect to="/userlocation" />}
       </>
