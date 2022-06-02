@@ -25,5 +25,13 @@
   },
   "resolutions": {
     "cheerio": "1.0.0-rc.10"
+  },
+  "jest": {
+    "roots": [
+      "app/javascript/components"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif)$": "<rootDir>/app/javascript/components/fileMock.js"
+    }
   }
 }
