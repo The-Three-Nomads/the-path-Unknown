@@ -74,8 +74,8 @@ h2, h3 {
 }
 
 .welcome{
-    text-align: left;
-    width: 500px;
+    text-align: left !important;
+    width: 500px !important;
 }
 
 

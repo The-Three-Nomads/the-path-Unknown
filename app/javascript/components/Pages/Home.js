@@ -16,7 +16,8 @@ class Home extends Component {
                         
                         <Col md={{ offset: 5 }}>
  
-                            <h2>Path Unknown</h2><h3  className='welcome'>Welcome to the road less traveled.</h3>
+                            <h2>Path Unknown</h2>
+                            <h3  className='welcome'>Welcome to the road less traveled.</h3>
                              
                             <br></br> 
                             <a href='/users/sign_up' className='navBtn'>Join Now</a>
