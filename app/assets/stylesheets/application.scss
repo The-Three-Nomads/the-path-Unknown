@@ -1,6 +1,8 @@
 @import "bootstrap";
 
 $blue : #2f4858;
+$lightblue : #0FA3B1;
+
 
 body {
     background-color: #2f4858;
@@ -8,7 +10,7 @@ body {
 }
 
 .link {
-    background-color: $blue;
+    background-color: $lightblue;
 }
 
 Container {
