@@ -4,24 +4,26 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="formGroup-input" >
-    <%= f.label :email %>
+    <%= f.label :email, :class => "label" %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="formGroup-input" >
-    <%= f.label :password %>
+    <%= f.label :password, :class => "label" %>
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
+ 
   <% if devise_mapping.rememberable? %>
-    <div class="formGroup-input">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="formGroup-input"> 
+      <%= f.check_box :remember_me, :class => "check_box" %>
+      <%= f.label :remember_me, :class => "label" %>
     </div>
   <% end %>
+   
 
   <div class="formGroup-input actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", :class => "signBtn" %>
   </div>
 <% end %>
 

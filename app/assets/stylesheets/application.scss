@@ -1,9 +1,5 @@
 @import "bootstrap";
 
-* {
-    background-color: #2f4858;
-}
-
 body {
     background-color: #2f4858;
 
@@ -31,6 +27,10 @@ h2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    // padding-top: 20px;
+    label {
+        padding: 5px;
+    }
     }
 
 .log-in {
@@ -40,6 +40,7 @@ h2 {
     height: 300px;
     top: 230px;
     display: flex;
+    flex-direction: column;
     background: #0FA3B1;
     border: 5px solid #000000;
     border-radius: 20px;
@@ -50,4 +51,24 @@ h2 {
     font-size: 15px;
     padding-top: 5px;
     padding-bottom: 20px;
+}
+
+.label {
+    background: #0FA3B1;
+    text-decoration: none;
+    color: #000;
+}
+
+.signBtn {
+    background: #2f4858;
+    color: #fff;
+}
+
+.logInLink {
+    // position: absolute;
+    bottom: 0;
+}
+
+.check_box {
+    margin-top: 10px;
 }
