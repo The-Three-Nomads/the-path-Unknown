@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap'
 import trailicon from '../assets/trailicon'
-import "./../Components/navbar/Navbar.css"
-import "./App.css"
+import "../../../assets/stylesheets/Navbar.css"
+import "../../../assets/stylesheets/App.css"
 
  
 class Home extends Component {

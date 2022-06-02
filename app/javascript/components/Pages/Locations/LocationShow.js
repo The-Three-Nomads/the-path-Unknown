@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardTitle, Col, CardImg, Button, Row, Container } from 'reactstrap'
-import "./../App.css"
+import "../../../../assets/stylesheets/App.css"
 
 class LocationShow extends Component {
     render() {
