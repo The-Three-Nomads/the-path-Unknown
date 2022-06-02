@@ -1,27 +1,34 @@
 import React, { Component } from "react";
-import { Card, CardTitle, Col } from "reactstrap";
+import { Card, CardTitle, Col, CardImg, Button, Row, Container } from 'reactstrap'
 import { NavLink } from "react-router-dom";
+import "./../App.css"
+
+
 
 export default class LocationIndex extends Component {
   render() {
     return (
       <>
-        <h3>View a list of all available locations</h3>
-
-        <Col sm="6">
-          {this.props.locations &&
-            this.props.locations.map((location) => {
-              return (
-                <NavLink to={`/locationshow/${location.id}`} key={location.id}>
-                  <CardTitle>
-                    <h4>{location.city}</h4>
-                    <h4>{location.state}</h4>
-                    <img src={location.image} width="200px" />
-                  </CardTitle>
-                </NavLink>
-              );
-            })}
-        </Col>
+        <CardTitle><center><h4 className="page-title">All Locations</h4></center></CardTitle>
+        <Container className="cardWrapper">
+          <center>
+            <Row> {this.props.locations &&
+              this.props.locations.map((location) => {
+                return (
+                  <Col sm="4" xs="6" key={location.id}>
+                    <NavLink to={`/locationshow/${location.id}`} key={location.id}>
+                      <CardTitle className="grow">
+                        <h4>{location.city}</h4>
+                        <h4>{location.state}</h4>
+                        <img src={location.image} width="300px" />
+                      </CardTitle>
+                    </NavLink>
+                  </Col>
+                );
+              })}
+            </Row>
+          </center>
+        </Container>
       </>
     );
   }

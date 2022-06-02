@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import AboutUs from "./pages/AboutUs";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import LocationEdit from "./pages/Locations/LocationEdit";
-import LocationIndex from "./pages/Locations/LocationIndex";
-import LocationNew from "./pages/Locations/LocationNew";
-import LocationShow from "./pages/Locations/LocationShow";
-import NotFound from "./pages/NotFound";
-import UserLocation from "./pages/Locations/UserLocation";
+import AboutUs from "./Pages/AboutUs";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Home from "./Pages/Home";
+import LocationEdit from "./Pages/Locations/LocationEdit";
+import LocationIndex from "./Pages/Locations/LocationIndex";
+import LocationNew from "./Pages/Locations/LocationNew";
+import LocationShow from "./Pages/Locations/LocationShow";
+import NotFound from "./Pages/NotFound";
+import UserLocation from "./Pages/Locations/UserLocation";
 
 class App extends Component {
   constructor(props) {
