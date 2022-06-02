@@ -10,8 +10,20 @@ body {
 }
 
 .link {
-    background-color: $lightblue;
-}
+    background-color: #0FA3B1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    text-shadow: 0px 2px 2px #000000;
+  }
+
+.link:hover {
+    color: #fff;
+    }
 
 Container {
     margin-top: 200px;
@@ -74,7 +86,7 @@ h2 {
 .check_box {
     margin-top: 10px;
 }
-// ___________________moved from app.css to scss__________
+// _______moved from app.css to scss__________
 
 h2 {
     font-size: 100px;
@@ -186,12 +198,12 @@ h2, h3 {
     padding-bottom: 20px;
 }
 
-.formGroup {
+.formGroup1 {
     color: #fff;
     background: transparent;
 }
 
-.formGroup-input {
+.formGroup-input1 {
     width: 300px;
     height: 40px;
     background: transparent;
@@ -199,7 +211,7 @@ h2, h3 {
     border-radius: 12px;
     }
 
-.label {
+.label1 {
     background: transparent;
 
 }
@@ -256,3 +268,49 @@ li {
     color: #fff;
 }
 
+// _________moved from navbar to scss__________
+
+.navBtn {
+    border-radius: 4px;
+    background: #0FA3B1;
+    padding: 0px 11px;
+    height: 50px;
+    width: 90px;
+    color: #fff;
+    justify-content: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    text-shadow: 0px 2px 2px #000000;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .navBtn:hover {
+      transition: all 0.2s ease-in-out;
+      background: #000;
+      color: #fff;
+  }
+
+  .center {
+    height: 50px;
+    width: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center2 {
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  
