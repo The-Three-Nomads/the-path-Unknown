@@ -50,90 +50,90 @@ class LocationEdit extends Component {
           </center>
         </CardTitle>
         <Form className="formWrapper">
-          <FormGroup className="formGroup">
-            <Label className="label" for="street">Street:</Label>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="street">Street:</Label>
             <Input
-              className="formGroup-input"
+              className="formGroup-input1"
               value={this.state.street}
               type="text"
               name="street"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup className="formGroup">
-            <Label className="label" for="city">City:</Label>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="city">City:</Label>
             <Input
-              className="formGroup-input"
+              className="formGroup-input1"
               value={this.state.city}
               type="text"
               name="city"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup className="formGroup">
-            <Label className="label" for="state">State:</Label>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="state">State:</Label>
             <Input
-              className="formGroup-input"
+              className="formGroup-input1"
               value={this.state.state}
               type="text"
               name="state"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup className="formGroup">
-            <Label className="label" for="description">Description:</Label>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="description">Description:</Label>
             <Input
-              className="formGroup-input"
+              className="formGroup-input1"
               value={this.state.description}
               type="text"
               name="description"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup className="formGroup">
-            <Label className="label" for="fee">Fee:</Label>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="fee">Fee:</Label>
             <Input
-              className="formGroup-input"
+              className="formGroup-input1"
               value={this.state.fee}
               type="text"
               name="fee"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup className="formGroup">
-            <Label className="label" for="coordinates">Coordinates:</Label>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="coordinates">Coordinates:</Label>
             <Input
-              className="formGroup-input"
+              className="formGroup-input1"
               value={this.state.coordinates}
               type="text"
               name="coordinates"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup className="formGroup">
-            <Label className="label" for="image">Image URL:</Label>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="image">Image URL:</Label>
             <Input
-              className="formGroup-input"
+              className="formGroup-input1"
               value={this.state.image}
               type="text"
               name="image"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup className="formGroup">
-            <Label className="label" for="link">Link to Website:</Label>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="link">Link to Website:</Label>
             <Input
-              className="formGroup-input"
+              className="formGroup-input1"
               value={this.state.link}
               type="text"
               name="link"
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup className="formGroup">
-            <Label className="label" for="review">Review:</Label>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="review">Review:</Label>
             <Input
-              className="formGroup-input"
+              className="formGroup-input1"
               value={this.state.review}
               type="text"
               name="review"
