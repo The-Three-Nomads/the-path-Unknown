@@ -6,6 +6,7 @@ import trailicon from '../assets/trailicon'
 class Home extends Component {
 
     render() {
+        const { logged_in, new_user_route } = this.props;
         return (
             <> 
                 <Container style={{ paddingTop: 100}}>
@@ -18,8 +19,8 @@ class Home extends Component {
                             <h3  className='welcome'>Welcome to the road less traveled.</h3>
                              
                             <br></br> 
-                            <a href='/users/sign_up' className='navBtn'>Join Now</a>
-                             
+                            {!logged_in && (<a href='/users/sign_up' className='navBtn'>Join Now</a>
+                            )}
                         </Col>
                     </Row>
                 </Container>
