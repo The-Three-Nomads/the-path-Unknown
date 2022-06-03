@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() })
 describe("When LocationShow renders", () => {
   it("displays a heading", () => {
     const locationShow = shallow(<LocationShow />)
-    const locationShowHeading = locationShow.find("h1")
+    const locationShowHeading = locationShow.find("h4")
     expect(locationShowHeading.text()).toEqual("Find Your Next Path")
   })
 })

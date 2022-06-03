@@ -9,7 +9,6 @@ import {
   Container,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
-// import "../../../../assets/stylesheets/App.css";
 
 export default class LocationIndex extends Component {
   handleDelete = (id) => {

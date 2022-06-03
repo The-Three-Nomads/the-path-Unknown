@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() })
 describe("When LocationIndex renders", () => {
   it("displays a heading", () => {
     const locationIndex = shallow(<LocationIndex />)
-    const locationIndexHeading = locationIndex.find("h3")
-    expect(locationIndexHeading.text()).toEqual("View a list of all available locations")
+    const locationIndexHeading = locationIndex.find("h4")
+    expect(locationIndexHeading.text()).toEqual("All Locations")
   })
 })

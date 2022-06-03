@@ -18,8 +18,8 @@ let current_user = {
 describe("When LocationNew renders", () => {
   it("displays a heading", () => {
     const locationNew = shallow(<LocationNew current_user={current_user} />);
-    const locationNewHeadingText = locationNew.find("h1");
-    expect(locationNewHeadingText.text()).toEqual("Create a New Location");
+    const locationNewHeadingText = locationNew.find("h4");
+    expect(locationNewHeadingText.text()).toEqual("Create a New Path");
   });
   it("displays a form", () => {
     const locationNew = shallow(<LocationNew current_user={current_user} />);
