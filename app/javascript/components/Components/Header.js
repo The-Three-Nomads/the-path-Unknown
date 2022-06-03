@@ -7,7 +7,7 @@ import {
   NavBtnLink,
   NavLink,
 } from "./navbar/NavBarElements";
-import "../../../assets/stylesheets/Navbar.css"
+// import "../../../assets/stylesheets/Navbar.css"
 
 
 class Header extends Component {

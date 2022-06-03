@@ -3,7 +3,7 @@ import { Card, CardTitle, Col, CardImg, Button, Container, CardGroup } from 'rea
 import andrew from '../assets/andrew'
 import earl from '../assets/earl'
 import jack from '../assets/jack'
-import "../../../assets/stylesheets/App.css"
+// import "../../../assets/stylesheets/App.css"
 
 
 class AboutUs extends Component {
