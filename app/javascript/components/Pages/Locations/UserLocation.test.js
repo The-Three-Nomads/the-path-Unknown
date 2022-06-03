@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe("When LocationIndex renders", () => {
   it("displays a heading", () => {
     const locationIndex = shallow(<UserLocationIndex />);
-    const locationIndexHeading = locationIndex.find("h3");
+    const locationIndexHeading = locationIndex.find("h4");
     expect(locationIndexHeading.text()).toEqual("Your Path Listings");
   });
 });

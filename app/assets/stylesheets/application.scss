@@ -1,9 +1,5 @@
 @import "bootstrap";
 
-// $blue : #2f4858;
-// $lightblue : #0FA3B1;
-
-
 body {
     background-color: #2f4858;
 
@@ -313,4 +309,15 @@ li {
   
   }
 
-  
+  .footer{
+    background-color: #0FA3B1;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding: 5px 10px 0px 10px;
+  }

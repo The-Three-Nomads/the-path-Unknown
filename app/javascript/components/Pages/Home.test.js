@@ -16,8 +16,8 @@ Enzyme.configure({adapter: new Adapter()})
 describe("When Home renders", () => {
     it("displays a heading", () => {
       const home = shallow(<Home />)
-      const homeHeading = home.find("h1").text()
-      expect(homeHeading).toEqual("Path Unknown")
+      const homeHeading = home.find("h2").first()
+      expect(homeHeading.text()).toEqual("Path Unknown")
     })
   })
   
