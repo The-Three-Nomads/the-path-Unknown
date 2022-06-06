@@ -17,6 +17,7 @@ export default class LocationIndex extends Component {
                   <Col sm="4" xs="6" key={location.id}>
                     <NavLink to={`/locationshow/${location.id}`} key={location.id}>
                       <CardTitle className="grow">
+                        <h4>{location.name}</h4>
                         <h4>{location.city}</h4>
                         <h4>{location.state}</h4>
                         <img src={location.image} width="300px" />

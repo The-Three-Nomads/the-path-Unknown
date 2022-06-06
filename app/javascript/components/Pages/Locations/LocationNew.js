@@ -7,12 +7,14 @@ class LocationNew extends Component {
     super(props);
     this.state = {
       newLocation: {
+        name: "",
         street: "",
         city: "",
         state: "",
         description: "",
         fee: "",
-        coordinates: "",
+        latitude: "",
+        longitude: "",
         image: "",
         link: "",
         review: "",
@@ -44,6 +46,10 @@ class LocationNew extends Component {
         <div className="centeredForm">
         <Form className="formWrapper">
           <FormGroup className="formGroup1">
+            <Label className="label1" for="name">Name:</Label>
+            <Input className="formGroup-input1" type="text" name="name" onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup className="formGroup1">
             <Label className="label1" for="street">Street:</Label>
             <Input className="formGroup-input1" type="text" name="street" onChange={this.handleChange} />
           </FormGroup>
@@ -69,11 +75,20 @@ class LocationNew extends Component {
             <Input className="formGroup-input1" type="text" name="fee" onChange={this.handleChange} />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="coordinates">Coordinates:</Label>
+            <Label className="label1" for="latitude">Latitude:</Label>
             <Input
               className="formGroup-input1"
               type="text"
-              name="coordinates"
+              name="latitude"
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="longitude">Longitude:</Label>
+            <Input
+              className="formGroup-input1"
+              type="text"
+              name="longitude"
               onChange={this.handleChange}
             />
           </FormGroup>
