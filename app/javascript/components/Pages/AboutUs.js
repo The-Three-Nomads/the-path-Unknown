@@ -5,7 +5,7 @@ import earl from '../assets/earl'
 import jack from '../assets/jack'
 
 
-export default AboutUs = () => {
+export default function AboutUs () {
         return (
             <center>
                 <Col>
