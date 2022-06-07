@@ -8,6 +8,7 @@ import LocationEdit from "./Pages/Locations/LocationEdit";
 import LocationIndex from "./Pages/Locations/LocationIndex";
 import LocationNew from "./Pages/Locations/LocationNew";
 import LocationShow from "./Pages/Locations/LocationShow";
+import Map from "./Pages/Locations/Map";
 import NotFound from "./Pages/NotFound";
 import UserLocation from "./Pages/Locations/UserLocation";
 
@@ -140,6 +141,8 @@ class App extends Component {
               );
             }}
           />
+          <Route
+            path="/map/:id" component={Map} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

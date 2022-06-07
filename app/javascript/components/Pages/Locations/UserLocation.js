@@ -33,6 +33,7 @@ export default class LocationIndex extends Component {
                       <div className="cardWrapper">
                       <CardTitle className="grow">
                         <NavLink to={`/locationshow/${location.id}`}>
+                          <h4>{location.name}</h4>
                           <h4>{location.city}</h4>
                           <h4>{location.state}</h4>
                           <img src={location.image} width="300px" />

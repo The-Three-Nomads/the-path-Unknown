@@ -6,12 +6,14 @@ class LocationEdit extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: "",
       street: "",
       city: "",
       state: "",
       description: "",
       fee: "",
-      coordinates: "",
+      latitude: "",
+      longitude: "",
       image: "",
       link: "",
       review: "",
@@ -50,6 +52,16 @@ class LocationEdit extends Component {
           </center>
         </CardTitle>
         <Form className="formWrapper">
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="name">Name:</Label>
+            <Input
+              className="formGroup-input1"
+              value={this.state.name}
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+            />
+          </FormGroup>
           <FormGroup className="formGroup1">
             <Label className="label1" for="street">Street:</Label>
             <Input
@@ -101,12 +113,22 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="coordinates">Coordinates:</Label>
+            <Label className="label1" for="latitude">Latitude:</Label>
             <Input
               className="formGroup-input1"
-              value={this.state.coordinates}
+              value={this.state.latitude}
               type="text"
-              name="coordinates"
+              name="latitude"
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <FormGroup className="formGroup1">
+            <Label className="label1" for="longitude">Longitude:</Label>
+            <Input
+              className="formGroup-input1"
+              value={this.state.longitude}
+              type="text"
+              name="longitude"
               onChange={this.handleChange}
             />
           </FormGroup>
