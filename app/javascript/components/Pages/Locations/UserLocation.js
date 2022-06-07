@@ -34,7 +34,7 @@ export default class LocationIndex extends Component {
                           <h4>{location.name}</h4>
                           <h4>{location.city}</h4>
                           <h4>{location.state}</h4>
-                          <img src={location.image} width="300px" />
+                          <img src={location.image} width="300px" height="200px" />
                         </NavLink>
                       </CardTitle>
                       <div className="buttonUpdDel">
