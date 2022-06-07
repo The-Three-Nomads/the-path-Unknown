@@ -14,16 +14,16 @@ export default function Map(){
   
   return (
     // Important! Always set the container height explicitly
-    <div style={{ height: '100vh', width: '100%' }}>
+    <div style={{ height: '100vh', width: '100%'}}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <AnyReactComponent className='pin'
+        <AnyReactComponent 
           lat= {defaultProps.center.lat}
           lng= {defaultProps.center.lng}
-          text="📍"
+          text="🔵"
         />
       </GoogleMapReact>
     </div>

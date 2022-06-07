@@ -7,12 +7,14 @@ RSpec.describe "Locations", type: :request do
         user = User.where(email: 'test@test.test').first_or_create(password: '12345678', password_confirmation: '12345678')
 
         user.locations.create(
+            name: 'place A',
             street: 'Constance ST',
             city: 'San Francisco',
             state: 'California',
             description: 'a fun place',
             fee: 'None',
-            coordinates: '37N-45E',
+            latitude: 33.33,
+            longitude: 33.33,
             image: 'https://shelbychicago.com/wp-content/uploads/2020/09/The-Shelby-001.jpg',
             link: 'https',
             review: 'this place is great',
@@ -33,12 +35,14 @@ RSpec.describe "Locations", type: :request do
         user = User.where(email: 'test@test.test').first_or_create(password: '12345678', password_confirmation: '12345678')
 
         user.locations.create(
+            name: 'place A',
             street: 'Constance ST',
             city: 'San Francisco',
             state: 'California',
             description: 'a fun place',
             fee: 'None',
-            coordinates: '37N-45E',
+            latitude: 33.33,
+            longitude: 33.33,
             image: 'https://shelbychicago.com/wp-content/uploads/2020/09/The-Shelby-001.jpg',
             link: 'https',
             review: 'this place is great',
@@ -47,12 +51,14 @@ RSpec.describe "Locations", type: :request do
 
         location_params = {
             location: {
+                name: 'place A',
                 street: 'Constance ST',
                 city: 'San Francisco',
                 state: 'California',
                 description: 'a fun place',
                 fee: 'None',
-                coordinates: '37N-45E',
+                latitude: 33.33,
+                longitude: 33.33,
                 image: 'https://shelbychicago.com/wp-content/uploads/2020/09/The-Shelby-001.jpg',
                 link: 'https',
                 review: 'this place is great',
@@ -73,12 +79,14 @@ RSpec.describe "Locations", type: :request do
             user = User.where(email: 'test@test.test').first_or_create(password: '12345678', password_confirmation: '12345678')
 
             user.locations.create(
+                name: 'place A',
                 street: 'Constance ST',
                 city: 'San Francisco',
                 state: 'California',
                 description: 'a fun place',
                 fee: 'None',
-                coordinates: '37N-45E',
+                latitude: 33.33,
+                longitude: 33.33,
                 image: 'https://shelbychicago.com/wp-content/uploads/2020/09/The-Shelby-001.jpg',
                 link: 'https',
                 review: 'this place is great',
@@ -87,12 +95,14 @@ RSpec.describe "Locations", type: :request do
 
             location_params = {
                 location: {
+                    name: 'place A',
                     street: 'Constance ST',
                     city: 'San Francisco',
                     state: 'California',
                     description: 'a fun place',
                     fee: 'None',
-                    coordinates: '37N-45E',
+                    latitude: 33.33,
+                    longitude: 33.33,
                     image: 'https://shelbychicago.com/wp-content/uploads/2020/09/The-Shelby-001.jpg',
                     link: 'https',
                     review: 'this place is great',
