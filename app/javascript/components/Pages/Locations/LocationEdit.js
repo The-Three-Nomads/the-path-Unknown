@@ -28,7 +28,6 @@ class LocationEdit extends Component {
       const location = this.props.locations.filter((location) => {
         return location.id.toString() === this.props.match.params.id;
       });
-      console.log(location);
       this.setState({
         ...this.state,
         ...location[0],
@@ -46,8 +45,6 @@ class LocationEdit extends Component {
   };
 
   render() {
-    console.log(this.props, this.state);
-
     return (
       <>
         <CardTitle>
