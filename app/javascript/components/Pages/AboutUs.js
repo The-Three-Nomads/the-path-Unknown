@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import { Card, CardTitle, Col, CardImg, Button, Container, CardGroup } from 'reactstrap'
+import React from 'react';
+import { Card, CardTitle, Col, CardImg, CardGroup } from 'reactstrap'
 import andrew from '../assets/andrew'
 import earl from '../assets/earl'
 import jack from '../assets/jack'
-// import "../../../assets/stylesheets/App.css"
 
 
-class AboutUs extends Component {
-    render() {
+export default AboutUs = () => {
         return (
             <center>
                 <Col>
@@ -41,6 +39,6 @@ class AboutUs extends Component {
             </center>
         );
     }
-}
 
-export default AboutUs;
+
+

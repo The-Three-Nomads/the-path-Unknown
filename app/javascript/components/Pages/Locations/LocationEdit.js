@@ -21,12 +21,13 @@ class LocationEdit extends Component {
     submitted: false;
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.locations.length !== this.props.locations.length) {
+  componentDidMount(prevProps) {
+    const lengthPerv = prevProps?.locations?.length;
+    const lengthProps = this.props?.locations?.length;
+    if (lengthPerv !== lengthProps) {
       const location = this.props.locations.filter((location) => {
         return location.id.toString() === this.props.match.params.id;
       });
-
       this.setState({
         ...this.state,
         ...location[0],
@@ -39,8 +40,8 @@ class LocationEdit extends Component {
   };
 
   handleSubmit = () => {
-    this.props.updateLocation(this.state, this.state.id)
-    this.setState({submitted: true});
+    this.props.updateLocation(this.state, this.state.id);
+    this.setState({ submitted: true });
   };
 
   render() {
@@ -53,7 +54,9 @@ class LocationEdit extends Component {
         </CardTitle>
         <Form className="formWrapper">
           <FormGroup className="formGroup1">
-            <Label className="label1" for="name">Name:</Label>
+            <Label className="label1" for="name">
+              Name:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.name}
@@ -63,7 +66,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="street">Street:</Label>
+            <Label className="label1" for="street">
+              Street:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.street}
@@ -73,7 +78,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="city">City:</Label>
+            <Label className="label1" for="city">
+              City:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.city}
@@ -83,7 +90,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="state">State:</Label>
+            <Label className="label1" for="state">
+              State:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.state}
@@ -93,7 +102,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="description">Description:</Label>
+            <Label className="label1" for="description">
+              Description:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.description}
@@ -103,7 +114,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="fee">Fee:</Label>
+            <Label className="label1" for="fee">
+              Fee:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.fee}
@@ -113,7 +126,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="latitude">Latitude:</Label>
+            <Label className="label1" for="latitude">
+              Latitude:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.latitude}
@@ -123,7 +138,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="longitude">Longitude:</Label>
+            <Label className="label1" for="longitude">
+              Longitude:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.longitude}
@@ -133,7 +150,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="image">Image URL:</Label>
+            <Label className="label1" for="image">
+              Image URL:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.image}
@@ -143,7 +162,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="link">Link to Website:</Label>
+            <Label className="label1" for="link">
+              Link to Website:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.link}
@@ -153,7 +174,9 @@ class LocationEdit extends Component {
             />
           </FormGroup>
           <FormGroup className="formGroup1">
-            <Label className="label1" for="review">Review:</Label>
+            <Label className="label1" for="review">
+              Review:
+            </Label>
             <Input
               className="formGroup-input1"
               value={this.state.review}
@@ -162,7 +185,13 @@ class LocationEdit extends Component {
               onChange={this.handleChange}
             />
           </FormGroup>
-          <Button className="submitButton" onClick={this.handleSubmit} name="submit">Submit</Button>
+          <Button
+            className="submitButton"
+            onClick={this.handleSubmit}
+            name="submit"
+          >
+            Submit
+          </Button>
         </Form>
         {this.state.submitted && <Redirect to="/userlocation" />}
       </>

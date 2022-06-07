@@ -23,6 +23,7 @@ Dependencies
     devise
     bootstrap
     rspec-rails
+    google-map-react
 Contributors
     Jack Mades: Project/Product Manager
     Andrew Luna: Design Lead

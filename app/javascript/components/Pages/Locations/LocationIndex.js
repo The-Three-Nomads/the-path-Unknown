@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { Card, CardTitle, Col, CardImg, Button, Row, Container } from 'reactstrap'
+import { CardTitle, Col, Row, Container } from 'reactstrap'
 import { NavLink } from "react-router-dom";
-
-
 
 export default class LocationIndex extends Component {
   render() {
