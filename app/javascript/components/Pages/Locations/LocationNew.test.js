@@ -24,6 +24,6 @@ describe("When LocationNew renders", () => {
   it("displays a form", () => {
     const locationNew = shallow(<LocationNew current_user={current_user} />);
     const formGroup = locationNew.find("FormGroup");
-    expect(formGroup.length).toEqual(9);
+    expect(formGroup.length).toEqual(11);
   });
 });

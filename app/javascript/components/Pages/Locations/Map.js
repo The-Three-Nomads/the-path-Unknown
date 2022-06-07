@@ -1,6 +1,5 @@
 import React from "react";
 import GoogleMapReact from 'google-map-react';
-import { FaMapMarkerAlt } from "react-icons/fa";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 

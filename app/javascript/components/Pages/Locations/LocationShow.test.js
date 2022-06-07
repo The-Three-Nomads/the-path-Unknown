@@ -7,7 +7,6 @@ import Adapter from 'enzyme-adapter-react-16'
 import LocationShow from './LocationShow'
 
 Enzyme.configure({ adapter: new Adapter() })
-
 describe("When LocationShow renders", () => {
   it("displays a heading", () => {
     const locationShow = shallow(<LocationShow />)

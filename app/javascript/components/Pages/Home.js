@@ -6,7 +6,7 @@ import trailicon from '../assets/trailicon'
 class Home extends Component {
 
     render() {
-        const { logged_in, new_user_route } = this.props;
+        const { logged_in } = this.props;
         return (
             <> 
                 <Container style={{ paddingTop: 100}}>

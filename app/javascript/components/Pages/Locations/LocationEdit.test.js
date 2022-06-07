@@ -19,6 +19,6 @@ describe("When locationEdit renders", () => {
     it("displays a form", () => {
         const locationEdit = shallow(<LocationEdit current_user={current_user} />);
         const formGroup = locationEdit.find("FormGroup");
-        expect(formGroup.length).toEqual(9);
+        expect(formGroup.length).toEqual(11);
     });
 });

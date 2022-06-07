@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import {
-  Card,
   CardTitle,
   Col,
-  CardImg,
   Button,
   Row,
   Container,
