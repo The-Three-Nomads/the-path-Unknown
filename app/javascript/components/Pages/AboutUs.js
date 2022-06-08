@@ -8,7 +8,7 @@ import jack from '../assets/jack'
 export default function AboutUs () {
         return (
             <center>
-                <Col>
+                <Col className="about-page">
                     <CardGroup className='cardgroup'>
                     <Card className='about-card'>
                         <CardImg src={jack} className='cardimage'/>
