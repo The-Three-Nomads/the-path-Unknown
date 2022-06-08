@@ -14,7 +14,7 @@ class Header extends Component {
 
       return (
         <>
-          <Nav>
+          <Nav className="header">
             <NavLink to="/" >
               <h1 className="link">Path Unknown</h1>
             </NavLink>

@@ -25,6 +25,7 @@ class LocationShow extends Component {
                 alt="rep"
                 style={{ paddingTop: "20px" }}
                 width="600px"
+                height="400px"
               />
             </Col>
             <Col md={{ offset: 4 }}>

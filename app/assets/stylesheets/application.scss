@@ -137,7 +137,7 @@ h2, h3 {
     align-items: center;
     justify-content: center;
     font-size: 40px;
-    padding-top: 20px;
+    padding-top: 7rem;
 }
 
 .cardgroup{
@@ -172,6 +172,7 @@ h2, h3 {
 
 .cardWrapper {
     padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 .formWrapper {
@@ -266,6 +267,8 @@ li {
 
 // _________moved from navbar to scss__________
 
+
+
 .navBtn {
     border-radius: 4px;
     background: #0FA3B1;
@@ -312,7 +315,7 @@ li {
   .footer{
     background-color: #0FA3B1;
     color: white;
-    position: fixed;
+    position:fixed ;
     bottom: 0;
     width: 100%;
     align-items: center;
@@ -384,3 +387,14 @@ li {
       z-index: 999;
   }
 
+.header {
+    position: fixed;
+    width: 100%;
+    margin-bottom: 3rem;
+
+}
+
+.about-page {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
